@@ -1,0 +1,13 @@
+{
+  "database": {
+    "NBRB_dir-currencies": "./database/NBRB/dir-currencies.json",
+    "NBRB_all-courses-set-daily": "./database/NBRB/all-courses-set-daily.json",
+    "NBRB_all-courses-set-monthly": "./database/NBRB/all-courses-set-monthly.json",
+    "AB_all-courses-set": "./database/AlfaBank/all-courses-set.json"
+  },
+
+  "routes": {
+    "currency": "./routes/currency.js",
+    "currencies": "./routes/currencies.js"
+  }
+}
