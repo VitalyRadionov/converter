@@ -8,11 +8,11 @@ const Webpack = require('webpack'),
 
 module.exports = {
     entry: [
-        './js/app.js'
+        'js/app.js'
     ],
 
     output: {
-        filename: './js/app.js'
+        filename: 'js/app.js'
     },
 
     devServer: {
@@ -29,48 +29,48 @@ module.exports = {
 
     module: {
         rules: [{
-                test: /\.js$/,
-                exclude: /node_modules/,
-                use: [{
-                        loader: 'babel-loader',
-                        options: {
-                            presets: [
-                                '@babel/preset-env'
-                            ]
-                        }
-                    },
-                    'eslint-loader'
-                ]
+            test: /\.js$/,
+            exclude: /node_modules/,
+            use: [{
+                loader: 'babel-loader',
+                options: {
+                    presets: [
+                        '@babel/preset-env'
+                    ]
+                }
             },
-            {
-                test: /\.less$/,
-                exclude: /node_modules/,
-                use: [
-                    MiniCssExtractPlugin.loader,
-                    'css-loader',
-                    {
-                        loader: 'postcss-loader',
-                        options: {
-                            plugins: [
-                                AutoPrefixer()
-                            ]
-                        }
-                    },
-                    'less-loader'
-                ]
-            },
-            {
-                test: /\.hbs$/,
-                exclude: /node_modules/,
-                use: [{
-                    loader: 'handlebars-loader',
+                'eslint-loader'
+            ]
+        },
+        {
+            test: /\.less$/,
+            exclude: /node_modules/,
+            use: [
+                MiniCssExtractPlugin.loader,
+                'css-loader',
+                {
+                    loader: 'postcss-loader',
                     options: {
-                        helperDirs: [
-                            __dirname + '/js/helpers/handlebars'
+                        plugins: [
+                            AutoPrefixer()
                         ]
                     }
-                }]
-            }
+                },
+                'less-loader'
+            ]
+        },
+        {
+            test: /\.hbs$/,
+            exclude: /node_modules/,
+            use: [{
+                loader: 'handlebars-loader',
+                options: {
+                    helperDirs: [
+                        __dirname + 'js/helpers/handlebars'
+                    ]
+                }
+            }]
+        }
         ]
     },
 
@@ -84,7 +84,7 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
-            template: './index.html',
+            template: 'index.html',
             filename: 'index.html',
             minify: {
                 useShortDoctype: true,
