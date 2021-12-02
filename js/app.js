@@ -2520,7 +2520,7 @@
             key: "sendToServer",
             value: function (t, n) {
               return new Promise(function (e) {
-                fetch("http://localhost:3000/api/curr/".concat(n), {
+                fetch("https://vitalyradionov.github.io/converter/api/curr/".concat(n), {
                   method: "PUT",
                   headers: { "Content-Type": "application/json" },
                   body: t,
