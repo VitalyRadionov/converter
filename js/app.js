@@ -2540,7 +2540,7 @@
             key: "getCurrList",
             value: function () {
               return new Promise(function (t) {
-                fetch("http://localhost:3000/api/currencies")
+                fetch("https://vitalyradionov.github.io/converter/api/currencies")
                   .then(function (e) {
                     return e.json();
                   })
