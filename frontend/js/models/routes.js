@@ -1,0 +1,1 @@
+export const NBRB_BANK = 'https://www.nbrb.by/api';
